@@ -1,0 +1,18 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Environment and secrets
+.env
+
+# Data and models
+data/
+*.pth
+*.pt
+*.db
+*.sqlite3
+
+# Docker artifacts
+*.log
