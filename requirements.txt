@@ -3,7 +3,7 @@
 torch==2.2.2+cpu
 torchvision==0.17.2+cpu
 
-streamlit
+streamlit>=1.30.0
 streamlit-drawable-canvas
 Pillow
 psycopg2-binary

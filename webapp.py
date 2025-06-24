@@ -69,7 +69,11 @@ def load_history():
 # --- Streamlit UI ---
 
 st.title("🧠 PyTorch MNIST Digit Recognizer")
-st.markdown("Draw a digit (0–9) below, click **Predict**, then submit feedback.")
+st.markdown(
+    "<p>Draw a digit (0–9) below, click <strong>Predict</strong>, then submit feedback.</p>",
+    unsafe_allow_html=True
+)
+
 
 # Drawing canvas
 canvas_result = st_canvas(
