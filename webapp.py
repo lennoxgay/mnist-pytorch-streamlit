@@ -36,6 +36,26 @@ def get_db_connection():
         port=os.getenv("DB_PORT")
     )
 
+# Ensure the 'predictions' table exists before anything else runs
+def init_db():
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS predictions (
+      id SERIAL PRIMARY KEY,
+      timestamp TIMESTAMP,
+      pred INT,
+      true_label INT,
+      confidence FLOAT
+    );
+    """)
+    conn.commit()
+    cur.close()
+    conn.close()
+
+# Run it on import
+init_db()
+
 
 # Log prediction + user feedback
 def log_prediction(pred, true_label, confidence):
