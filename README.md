@@ -1,4 +1,4 @@
-one thing i learned do not make assumptions
+One thing i learned do not make assumptions
 
 ![Py1](https://github.com/user-attachments/assets/15beff9d-afb7-442d-8dc8-bf1663a5e36d)
 
